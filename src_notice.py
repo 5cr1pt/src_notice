@@ -9,7 +9,7 @@ def print_color(notice_time, title):
     grep_list = ['活动', '周岁', '周年', '双倍', '三倍', '端午', '七夕', '双11安全保卫战']
     num = 1
     for i in grep_list:
-        if (i in title) and (num == 1) and ('2020' in notice_time or notice_time == '' or '20-' in notice_time) and (
+        if (i in title) and (num == 1) and ('2021' in notice_time or notice_time == '' or '20-' in notice_time) and (
                 '公示' not in title and '公告' not in title):
             print('\033[0;33m| \033[0m\033[0;31m%s\t%s\033[0m' % (notice_time, title))
             num = num + 1
@@ -467,6 +467,36 @@ def bytedance(number):
         title = notice_list[i].select('a')[0].text
         print_color(time, title)
 
+def main():
+    number = 3
+    src_360(number)  # 360
+    src_58(number)  # 58
+    alibaba(number)  # 阿里
+    ele(number)  # 阿里本地生活
+    iqiyi(number)  # 爱奇艺
+    baidu(number)  # 百度
+    ke(number)  # 贝壳
+    bilibili(number)  # 哔哩哔哩
+    cainiao(number)  # 菜鸟裹裹
+    didichuxing(number)  # 滴滴出行
+    duxiaoman(number)  # 度小满
+    # guazi(number)  # 瓜子
+    jd(number)  # 京东
+    alipay(number)  # 蚂蚁金服
+    meituan(number)  # 美团
+    immomo(number)  # 陌陌
+    oppo(number)  # OPPO
+    pingan(number)  # 平安
+    shuidihuzhu(number)  # 水滴互助
+    sf_express(number)  # 顺丰
+    tencent(number)  # 腾讯
+    vivo(number)  # vivo
+    src_163(number)  # 网易
+    vip(number)  # 唯品会
+    wifi(number)  # WIFI万能钥匙
+    zto(number)  # 中通
+    bytedance(number)  # 字节跳动
+
 
 if __name__ == '__main__':
     print('''\033[0;33m
@@ -487,32 +517,5 @@ Version：0.1              date: 2020-11-15
 Author: TeamsSix          微信公众号：TeamsSix
 Blog: teamssix.com        Github: github.com/teamssix
 \033[0m''')
-
-    number = 3
-    src_360(number)  # 360
-    src_58(number)  # 58
-    alibaba(number)  # 阿里
-    ele(number)  # 阿里本地生活
-    iqiyi(number)  # 爱奇艺
-    baidu(number)  # 百度
-    ke(number)  # 贝壳
-    bilibili(number)  # 哔哩哔哩
-    cainiao(number)  # 菜鸟裹裹
-    didichuxing(number)  # 滴滴出行
-    duxiaoman(number)  # 度小满
-    guazi(number)  # 瓜子
-    jd(number)  # 京东
-    alipay(number)  # 蚂蚁金服
-    meituan(number)  # 美团
-    immomo(number)  # 陌陌
-    oppo(number)  # OPPO
-    pingan(number)  # 平安
-    shuidihuzhu(number)  # 水滴互助
-    sf_express(number)  # 顺丰
-    tencent(number)  # 腾讯
-    vivo(number)  # vivo
-    src_163(number)  # 网易
-    vip(number)  # 唯品会
-    wifi(number)  # WIFI万能钥匙
-    zto(number)  # 中通
-    bytedance(number)  # 字节跳动
+    main()
+    
